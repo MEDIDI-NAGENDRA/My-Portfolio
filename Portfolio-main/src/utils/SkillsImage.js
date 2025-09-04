@@ -71,13 +71,16 @@ import picsart from "../Assets/svg/skills/picsart.svg";
 import sketch from "../Assets/svg/skills/sketch.svg";
 import unity from "../Assets/svg/skills/unity.svg";
 import wolframalpha from "../Assets/svg/skills/wolframalpha.svg";
+import MachineLearning from "../Assets/svg/skills/MachineLearning.svg";
+import DataScience from "../Assets/svg/skills/DataScience.svg";
+import DeepLearning from "../Assets/svg/skills/DeepLearning.svg";
 
 import canva from "../Assets/svg/skills/canva.svg";
 
 export const skillsImage = (skill) => {
-  const skillID = skill.toLowerCase();
+  const skillID = skill.toLowerCase().replace(/\s/g, "");
   switch (skillID) {
-    case "spring boot":
+    case "springboot":
       return SpringBoot;
     case "html":
       return html;
@@ -223,6 +226,12 @@ export const skillsImage = (skill) => {
       return wolframalpha;
     case "canva":
       return canva;
+    case "machinelearning":
+      return MachineLearning;
+    case "datascience":
+      return DataScience;
+    case "deeplearning":
+      return DeepLearning;
     default:
       break;
   }
